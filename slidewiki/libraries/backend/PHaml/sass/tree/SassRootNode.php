@@ -94,7 +94,7 @@ class SassRootNode extends SassNode {
 	 * Child classes must override this method.
 	 * @throws SassNodeException if not overriden
 	 */
-	public static function isa($line) {
+	public static function isa($line, $syntax = "") {
 		throw new SassNodeException('Child classes must override this method');
 	}
 }

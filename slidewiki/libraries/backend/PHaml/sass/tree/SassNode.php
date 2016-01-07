@@ -334,9 +334,10 @@ class SassNode {
 	/**
 	 * Returns a value indicating if the token represents this type of node.
 	 * @param object token
+     * @param string the property syntax being used
 	 * @return boolean true if the token represents this type of node, false if not
 	 */
-	public static function isa($token) {
+	public static function isa($token, $syntax) {
 		throw new SassNodeException('Child classes must override this method');
 	}
 }

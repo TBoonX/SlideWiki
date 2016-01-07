@@ -177,7 +177,7 @@ class SassPropertyNode extends SassNode {
 	 * @param string the property syntax being used
 	 * @return boolean true if the token represents this type of node, false if not
 	 */
-	public static function isa($token, $syntax) {
+	public static function isa($token, $syntax = "") {
 		$matches = self::match($token, $syntax);
 
 		if (!empty($matches)) {	
@@ -186,7 +186,7 @@ class SassPropertyNode extends SassNode {
 				return false; 
 			}
 	  	if ($token->level === 0) {
-	  		throw new SassPropertyNodeException('Properties can not be assigned at root level', array(), $this);
+	  		throw new SassPropertyNodeException('Properties can not be assigned at root level', array(), null);
 	  	}
 	  	else {
 				return true;

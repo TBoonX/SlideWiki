@@ -58,7 +58,7 @@ class SassCommentNode extends SassNode {
 	 * @param object token
 	 * @return boolean true if the token represents this type of node, false if not
 	 */
-	public static function isa($token) {
+	public static function isa($token, $syntax = "") {
 		return $token->source[0] === self::NODE_IDENTIFIER;
 	}
 }
